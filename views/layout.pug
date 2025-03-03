@@ -7,15 +7,15 @@ html
     meta(name='description' content='Коллекция микроорганизмов УНУ Коллекция НИИВС им И.И.Мечникова')
     link(rel='stylesheet' href='stylesheets/style.css')
     //- link(rel='stylesheet' href="stylesheets/font-awesome.css")
-    link(rel='stylesheet' href="/stylesheets/footstand.css")
-    script(src='/javascripts/jquery-3.6.4.min.js')
-    script(src='/javascripts/popups.js')
+    link(rel='stylesheet' href="stylesheets/footstand.css")
+    script(src='javascripts/jquery-3.6.4.min.js')
+    script(src='javascripts/popups.js')
     //- script(src='https://code.jquery.com/jquery-3.6.4.min.js' integrity='sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=' crossorigin='anonymous')
     //- link(rel='stylesheet' href='/stylesheets/bootstrap.css' )
-    link(rel='stylesheet' href='/stylesheets/custBoot.css' )
-    link(rel='stylesheet' href='/stylesheets/popups.css' )
-    script(src='/javascripts/bootstrap.min.js' )
-    link(href='/stylesheets/font-awesome.css' rel='stylesheet')
+    link(rel='stylesheet' href='stylesheets/custBoot.css' )
+    link(rel='stylesheet' href='stylesheets/popups.css' )
+    script(src='javascripts/bootstrap.min.js' )
+    link(href='stylesheets/font-awesome.css' rel='stylesheet')
     block footable
   body  
     nav.navbar.navbar-expand-lg.navbar-inverse.fixed-top.nav.navbar-center(style='background-color: #510000;')
@@ -33,7 +33,7 @@ html
                 | Коллекция
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
-                  a.dropdown-item.catalog(href='/catalog') Каталог
+                  a.dropdown-item.catalog(href='catalog') Каталог
                 li
                   a.dropdown-item(href='#') Бактерии
                 li
@@ -41,13 +41,13 @@ html
                 li
                   hr.dropdown-divider
                 li
-                  a.dropdown-item(href='/application') Подать заявку
+                  a.dropdown-item(href='application') Подать заявку
             li.nav-item
               a.nav-link(aria-current='page' href='/instruction') Инструкции
             li.nav-item
-              a.nav-link(href='/about') O Коллекция
+              a.nav-link(href='about') O Коллекция
             li.nav-item
-              a.nav-link(href='/contacts') Контакты
+              a.nav-link(href='contacts') Контакты
     block content
     .container.px-4.py-5
       footer.py-3.my-4.text-start.border-top
@@ -84,4 +84,4 @@ html
     //- script(src='{% static js %}myjs.js')
    
     
-    script(src='/javascripts/footableSt.js')
+    script(src='javascripts/footableSt.js')
