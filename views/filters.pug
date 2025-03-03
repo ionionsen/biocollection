@@ -1,0 +1,50 @@
+extends layout
+block footable
+    script.
+        //- let t= title;
+        let col = [
+        {"name":"vid","title":"Вид",},
+        {"name":"numstrain","title":"Номер штамма",},
+        
+        {"name":"vyd_date","title":"Дата выделения",},
+        {"name":"place","title":"Место выделения",  "breakpoints":"all",},
+        
+        {"name":"atcc","title":"atcc",  "breakpoints":"all",},
+        
+       
+    
+        ]
+        jQuery(function($){
+        $('.table').footable({
+        "columns": col,
+        //- "rows": $.get('http://bio/api/strains/?vid=#{title}'),
+        "rows": $.get('http://bio/api/strain/#{title}/'),
+        "paging": {
+        "container": "#paging-ui-container",
+        "size": 50
+        },
+        "empty": "Не найдено",
+        "filtering": {
+        "filters": [{
+        "name": "my-filter",
+        "query": "The value",
+        "columns": ["species"]
+        }]
+        }
+        });
+        });
+
+
+block content
+    .container.px-4.py-5
+        .row
+            .col-sm-2
+                nav(style="--bs-breadcrumb-divider: '>';" aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='/') Главная
+                        li.breadcrumb-item
+                            a(href='/catalog') Каталог
+                        li.breadcrumb-item.active(aria-current='page')=title
+            .col-sm-10
+                table.table(data-paging='true')

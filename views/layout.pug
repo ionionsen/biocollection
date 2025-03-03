@@ -1,0 +1,103 @@
+html
+  head    
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 
+    = title 
+    meta(name='description' content='Коллекция микроорганизмов УНУ Коллекция НИИВС им И.И.Мечникова')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    //- link(rel='stylesheet' href="/stylesheets/font-awesome.css")
+    link(rel='stylesheet' href="/stylesheets/footstand.css")
+    script(src='/javascripts/jquery-3.6.4.min.js')
+    script(src='/javascripts/popups.js')
+    //- script(src='https://code.jquery.com/jquery-3.6.4.min.js' integrity='sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=' crossorigin='anonymous')
+    //- link(rel='stylesheet' href='/stylesheets/bootstrap.css' )
+    link(rel='stylesheet' href='/stylesheets/custBoot.css' )
+    link(rel='stylesheet' href='/stylesheets/popups.css' )
+    script(src='/javascripts/bootstrap.min.js' )
+    link(href='/stylesheets/font-awesome.css' rel='stylesheet')
+    block footable
+    // Yandex.Metrika counter
+    script(type='text/javascript').
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(57290515, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true
+      });
+    noscript
+    div
+      img(src='https://mc.yandex.ru/watch/57290515' style='position:absolute; left:-9999px;' alt='')
+  // /Yandex.Metrika counter
+  body  
+    nav.navbar.navbar-expand-lg.navbar-inverse.fixed-top.nav.navbar-center(style='background-color: #510000;')
+      .container-fluid
+        .brand-bg
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+          i.fa.fa-bars(style='font-size: 1.73em;')
+          //- span.bi(style='heigth:50px')
+          //-   p(style='font-size: 1.73em;')
+          //-     |P
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.mx-auto.mb-2.mb-lg-0.tp-menu
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Коллекция
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item.catalog(href='/catalog') Каталог
+                li
+                  a.dropdown-item(href='#') Бактерии
+                li
+                  a.dropdown-item(href='#') Грибы
+                li
+                  hr.dropdown-divider
+                li
+                  a.dropdown-item(href='/application') Подать заявку
+            li.nav-item
+              a.nav-link(aria-current='page' href='/instruction') Инструкции
+            li.nav-item
+              a.nav-link(href='/about') O Коллекция
+            li.nav-item
+              a.nav-link(href='/contacts') Контакты
+    block content
+    .container.px-4.py-5
+      footer.py-3.my-4.text-start.border-top
+        .row.footer
+          .col-sm-4
+            p
+              | ФГБНУ НИИВС им. И.И. Мечникова
+              br
+            p
+              | Федеральное государственное бюджетное научное учреждение «Научно-исследовательский институт вакцин и сывороток им. И.И. Мечникова»
+          .col-sm-5
+            p
+              svg.bi.bi-geo-alt-fill(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='currentColor' viewBox='0 0 16 16')
+                path(d='M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z')
+              a(href='https://yandex.ru/maps/213/moscow/house/maly_kazyonny_pereulok_5a/Z04YcAJmSUwFQFtvfXt3cHlqbA==/?ll=37.656092%2C55.761599&z=16.75' target='_blank')  Россия 105064, Москва, Малый Казенный переулок, д.5а
+            p
+              svg.bi.bi-telephone(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='currentColor' viewBox='0 0 16 16')
+                path(d='M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z')
+              a(href='tel:+74959174900')  +7 (495) 916-22-17
+              a(href='tel:+74959174900')  +7 (495) 917-87-41
+          .col-sm-3
+            p © 2021 НИИВС ИМ.И.И.Мечникова
+            //- svg.bi.bi-envelope(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='currentColor' viewBox='0 0 16 16')
+            //-   path(d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z')
+            //- a(href='mailto:mech.inst@mail.ru')  poddubikov@yandex.ru
+        //
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+    //- script(src='{% static js %}myjs.js')
+   
+    
+    script(src='/javascripts/footableSt.js')

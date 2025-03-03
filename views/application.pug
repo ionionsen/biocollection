@@ -1,0 +1,129 @@
+extends layout
+
+block content
+  .container.px-4.py-5
+    //- .row.row-cols-1.row-cols-md-2.align-items-md-center.g-5.py-5
+    //-   .col.d-flex.flex-column.align-items-start.gap-2
+    //-     h3.fw-bold Left-aligned title explaining these awesome features
+    //-     p.text-body-secondary
+    //-       | Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+    //-     form
+    //-       .mb-3
+    //-           label.form-label(for='exampleInputEmail1') Email address
+    //-           input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp')
+    //-           #emailHelp.form-text We'll never share your email with anyone else.
+    //-       .mb-3
+    //-           label.form-label(for='exampleInputPassword1') Password
+    //-           input#exampleInputPassword1.form-control(type='password')
+    //-       .mb-3.form-check
+    //-           input#exampleCheck1.form-check-input(type='checkbox')
+    //-           label.form-check-label(for='exampleCheck1') Check me out
+    //-       button.btn.btn-primary(type='submit') Submit
+    //-   .col
+    //-     .row.row-cols-1.row-cols-sm-2.g-4
+    //-       .col.d-flex.flex-column.gap-2
+    //-         .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+    //-           svg.bi(width='1em' height='1em')
+    //-             use(xlink:href='#collection')
+    //-         h4.fw-semibold.mb-0 Featured title
+    //-         p.text-body-secondary Paragraph of text beneath the heading to explain the heading.
+    //-       .col.d-flex.flex-column.gap-2
+    //-         .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+    //-           svg.bi(width='1em' height='1em')
+    //-             use(xlink:href='#gear-fill')
+    //-         h4.fw-semibold.mb-0 Featured title
+    //-         p.text-body-secondary Paragraph of text beneath the heading to explain the heading.
+    //-       .col.d-flex.flex-column.gap-2
+    //-         .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+    //-           svg.bi(width='1em' height='1em')
+    //-             use(xlink:href='#speedometer')
+    //-         h4.fw-semibold.mb-0 Featured title
+    //-         p.text-body-secondary Paragraph of text beneath the heading to explain the heading.
+    //-       .col.d-flex.flex-column.gap-2
+    //-         .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+    //-           svg.bi(width='1em' height='1em')
+    //-             use(xlink:href='#table')
+    //-         h4.fw-semibold.mb-0 Featured title
+    //-         p.text-body-secondary Paragraph of text beneath the heading to explain the heading.
+
+    .row.mb-2
+      .col-md-4.border-right
+           
+
+            h4.pb-2.border-bottom  
+              |Заявка
+            br
+            //- p.fst-italic  
+            //-   | Заполните необходимые поля и баблабла 
+            if message || errors 
+              .alert.alert-success(role='alert')
+                = message
+                = errors
+            //- #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='false')
+            //-   .modal-dialog
+            //-     .modal-content
+            //-       form(method='post')
+            //-         .mb-3
+            //-             label.form-label(for='customer_name') Заказчик(организация/ФИО)
+            //-             input#customer_name.form-control(name="customer_name" type='text' aria-describedby='emailHelp')
+            //-             //- #emailHelp.form-text 
+            //-         .mb-3
+            //-             label.form-label(for='exampleInputEmail1') Адрес электронной почты
+            //-             input#customer_email.form-control(type='email' aria-describedby='emailHelp')
+            //-             button.btn.btn-primary(type='submit' data-bs-toggle='modal' data-bs-target='#exampleModal') Отправить
+
+                    //- #emailHelp.form-text We'll never share your email with anyone else.
+                //- .mb-3.form-check
+                //-     input#exampleCheck1.form-check-input(type='checkbox')
+                //-     label.form-check-label(for='exampleCheck1') Check me out
+                //- button.btn.btn-primary(type='submit' data-bs-toggle='modal' data-bs-target='#exampleModal') Отправить
+                  //- .modal-header
+                  //-   h5#exampleModalLabel.modal-title Modal title
+                  //-   button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                  //- .modal-body
+                  //-   | ...
+                  //- .modal-footer
+                  //-   button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                  //-   button.btn.btn-primary(type='button') Save changes
+            //- button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+            //- | Launch demo modal
+            if errors > 0 
+              = errors
+            form(method='post')
+                .mb-3
+                    label.form-label(for='customer_name') Заказчик(организация/ФИО)
+                    input#customer_name.form-control(name="customer_name" type='text' aria-describedby='emailHelp')
+                    //- #emailHelp.form-text 
+                .mb-3
+                    label.form-label(for='exampleInputEmail1') Адрес электронной почты
+                    input#customer_email.form-control(name="customer_email" type='email' aria-describedby='emailHelp')
+                    //- #emailHelp.form-text We'll never share your email with anyone else.
+                //- .mb-3.form-check
+                //-     input#exampleCheck1.form-check-input(type='checkbox')
+                //-     label.form-check-label(for='exampleCheck1') Check me out
+                button.btn.btn-primary(type='submit' ) Отправить
+      .col-md-8
+            h4.pb-2.border-bottom 
+              | Порядок доступа к услугам Коллекции
+            ul(style='list-style-type:decimal;')
+              li
+                | Заинтересованный пользователь оформляет 
+                a(href='mailto:mech.inst@mail.ru')
+                  b  заявку
+                | 	  на оказание услуг
+              li Срок рассмотрения заявок - не более 3 рабочих дней.
+              li
+                | По результатам рассмотрения принимается решение о заключении с пользователем УНУ договора присоединения, и заявка включается в план работ УНУ, либо дается отказ от оказания услуг.
+                ul(style='list-style: square;')
+                  | Причины отказа:
+                  li неисправность оборудования ЦКП;
+                  li отсутствие требуемого штамма в Коллекции НИИВС им. И.И.Мечникова
+                  li
+                    | невозможность включить заявку в план работ ЦКП ввиду загруженности оборудования или сотрудников;
+                  li невозможность уложиться в сроки, требуемые заказчиком.
+              li
+                | Услуга оказывается после подписания договора присоединения.
+                | 
+              li
+                | В срок не более 14 дней, по окончанию заказ передается Заказчику вместе с Актом сдачи-приемки.
+

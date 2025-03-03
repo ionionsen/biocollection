@@ -1,0 +1,71 @@
+extends layout
+block footable
+    script.
+        let col = [
+
+        {
+        "type": "text",
+        "name":"species",
+        "title":"Вид",
+        "formatter": function(value, options, rowData){
+            
+            return '<a href="catalog/strain/' +value+ '">' +value +'</a>';
+        }
+        },
+        {
+        "name":"genus",
+        "title":"Род",
+        },
+        {
+        "name":"regnum",
+        "title":"Домен",
+        "breakpoints":"xs sm md",
+        },
+        // {"name":"vid","title":"Штамм",},
+        // {"name":"invent","title":"invent", "breakpoints":"xs sm md",},
+        // {"name":"bar","title":"bar"},
+        // {"name":"total","title":"total"},
+        ]
+        jQuery(function($){
+        $('.table').footable({
+        "columns": col,
+        "rows": $.get('http://bio/api/species/'),
+        // "rows": [{
+        //   "options": {
+        //   "classes": "class1 class2"
+        //   },
+        //   "value": '',
+        //  }],
+        
+        "paging": {
+        "container": "#paging-ui-container",
+        "size": 50
+        },
+        "filtering": {
+            "enabled": true,
+            "container": "#filter-form-container",
+        //- "connectors": true,
+        },
+        "Search": "Посик",
+        "toggleColumn": "last",
+        "cascade": false,
+        });
+        });
+
+block content
+    .container.px-4.py-5
+        .row
+            .col-sm-2.text-start
+                .well
+
+                    nav(style="--bs-breadcrumb-divider: '>';" aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='/') Главная
+                        li.breadcrumb-item.active(aria-current='page') Каталог
+                
+
+            .col-sm-10
+                p.lead
+                    | Коллекция содержит 235 видов штаммов микроорганизмов, и включат 2552 единиц хранения.
+                table.table(data-paging='true' )

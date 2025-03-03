@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .container.px-4.py-5
+        .row.row-cols-1.row-cols-md-2.align-items-md-center.g-5.py-5
+            .col.d-flex.flex-column.align-items-start.gap-2
+                p.lead
+                |Россия 105064, Москва, Малый Казенный переулок, д.5а
+                iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A9a5c2c42bfcc4e790ce1deb635c1554820e69931031caf976888c2c8caeb7eb7&source=constructor' width='100%' height='400' frameborder='0')
+
+            .col
+                .row.row-cols-1.row-cols-sm-2.g-4
+                    .col.d-flex.flex-column.gap-2
+                        .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+                        svg.bi(width='1em' height='1em')
+                            use(xlink:href='#collection')
+                        h4 Организация
+                        p.text-body-secondary ФГБНУ НИИВС им. И.И. Мечникова
+                    .col.d-flex.flex-column.gap-2
+                        .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+                        svg.bi(width='1em' height='1em')
+                            use(xlink:href='#gear-fill')
+                        h4.fw-semibold.mb-0 Подразделение
+                        p.text-body-secondary УНУ Коллекция НИИВС им И.И.Мечникова.
+                    .col.d-flex.flex-column.gap-2
+                        .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+                        svg.bi(width='1em' height='1em')
+                            use(xlink:href='#speedometer')
+                        h4.fw-semibold.mb-0 Руководитель
+                        p.text-body-secondary Поддубиков Александр Владимирович, к.м.н.
+                    .col.d-flex.flex-column.gap-2
+                        .feature-icon-small.d-inline-flex.align-items-center.justify-content-center.text-bg-primary.bg-gradient.fs-4.rounded-3
+                        svg.bi(width='1em' height='1em')
+                            use(xlink:href='#table')
+                        h4.fw-semibold.mb-0 Телефон
+                        p.text-body-secondary
+                            a(href='tel:+74959174900')  +7 (495) 916-22-17
+                            br
+                            a(href='tel:+74959174900')  +7 (495) 917-87-41
