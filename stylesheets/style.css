@@ -1,0 +1,305 @@
+/* @import url("https://fonts.googleapis.com/css?family=Rubik:400,300,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap'); */
+
+
+body {
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    color: #000000;
+    background-color: white;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    padding-top: 70px;
+  }
+
+  
+a {
+  color: black !important;
+  text-decoration: none !important;
+  transition: .25s;
+}
+.container-fluid {
+  padding:10px !important;
+}
+/* .feature {
+  height: 500px;
+} */
+/* .navbar {
+  height: 100px !important;
+} */
+/* .navbar-toggler:focus{
+  color:rgb(122, 7, 7) !important;
+} */
+.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+  
+.brand-text {
+    color: #990000;
+  }
+a:hover, a:focus {
+    color: #510000 !important ;
+    text-decoration: none;
+    outline: none;
+}
+
+/* .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255) !important;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 2;
+    font-size: 15px;
+  } */
+
+.navbar-brand {
+  font-size: 14px !important;
+}
+
+.nav-link {
+
+  font-weight: 600 ;
+  text-align: center;
+  padding: 14px 15px;
+  font-size: 15px; 
+  color: #ffffff !important;
+
+}
+.nav-item a:hover {
+ color: #a3a3a3 !important;
+} 
+
+
+
+.footable .caret {
+  display: none  !important ; 
+}
+/*/*
+bio.instmech site custom v.1.0
+Copyright 2020, Vladimir Lyubavskyi
+*/
+
+/* button.list-group-item {
+    height: fit-content;
+    width: 100%;
+    font-size: 12px;
+    text-align: left;
+     white-space: normal;
+
+}
+
+.list-group-item {
+    background-color: inherit;
+    border: 1px solid #e7eaec;
+    display: block;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    position: relative;
+} */
+
+/* a {
+  color: black;
+  text-decoration: none;
+  transition: .25s;
+}
+
+a:hover, a:focus {
+  color: #990000 ;
+  text-decoration: none;
+  outline: none;
+}
+
+a[href*='callto'], a[href*='mailto'] {
+  white-space: nowrap;
+}
+
+.link-hover {
+  color: #f5a63f;
+}
+
+.link-press {
+  color: #f5a63f;
+}
+
+.p a:hover,
+.list a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+      margin: 0 0 40px;
+  text-align: center;
+border-bottom: 1px solid #80808045;
+
+
+}
+
+.navlist {
+}
+.navlist a {
+
+font-weight: 600;
+  text-align: center;
+  padding: 14px 15px;
+  font-size: 15px;
+} 
+
+
+ul {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.breadcrumbs {
+  margin: 30px 0 30px;
+  font-size: 12px;
+  font-style: italic;
+  padding: 10px 16px;
+    /* list-style: none; */
+    /* background-color: #eee; */
+}
+
+/*.breadcrumbs a:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}*/
+.breadcrumbs a {
+  text-decoration: none;
+  /*text-decoration: underline;*/
+  color:black;
+}
+.breadcrumbs a:hover {
+  color: #990000;
+  text-decoration: underline;
+}
+.item-container {
+  padding: 0px 0px 20px;
+    columns: auto 3;
+}
+
+.item-elem a {
+  padding: :10px;
+/*  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;*/
+}
+
+.item-elem a:hover {
+font-weight: bold;
+color:grey;
+}
+
+.column-list {
+/*  columns: 100px 3 ;*/
+}
+/***** BREADCRUMBS ******/
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+
+
+/**** FOOTER ****/
+footer{
+  color:grey;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+footer a {
+text-decoration: none;
+color:grey;
+}
+
+footer a:hover {
+
+}
+.footer { 
+  font-size: 12px !important;
+    /* width: 100%``; */
+  margin-top:20px;
+  position: static;
+  /* padding-top: 0px; */
+  clear: both;
+  height: 80px;
+  /* background: rgb(139, 0, 0); */
+  /* position: absolute; */
+  /* border-top-style: dashed; */
+  /* border-top: 1px solid #80808045; */
+  /* border-top-color: rgb(82, 4, 4); */
+}
+
+.foo_addr p {
+    display: inline-block;
+}
+.foo_addr a > p{
+  margin-left: 8px;
+}
+/**** END FOOTER ****/
+
+
+.search {
+
+  padding-bottom: 20px; 
+}
+
+@media only screen and (max-width: 600px) {
+/*header {
+  flex-direction:column;
+}*/
+
